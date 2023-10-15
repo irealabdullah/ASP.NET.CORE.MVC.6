@@ -1,0 +1,65 @@
+﻿<h1>We are using Razor Syntax</h1>
+
+
+<h3>Today Date is @DateTime.Now</h3>
+
+@{
+    var fname = "Abdullah";
+    var lname = "Tariq";
+}
+
+<h3>@fname @lname</h3>
+
+@{
+    var fullname = fname + " "+ lname;
+    <h3>@fullname</h3>
+}
+
+
+@{
+    var myname = "Abdullah";
+    if (myname.Equals(fname))
+    {
+        <h3>Your name is @fname</h3>
+    }
+    else
+    {
+        <h3>Your name is not @fname</h3>
+    }
+}
+
+@{
+    int num = 5;
+    int result;
+    for (int i = 1; i <=10 ; i++)
+    {
+        result = num * i; 
+        <h3>@num * @i = @result </h3>
+    }
+
+}
+
+@{
+    string[] names = { "Ali", "Asad", "Amir" };
+    
+    foreach (var Names in names)
+    {
+        <h3>@Names</h3>
+    }
+
+    string[] ages = {"23","21","20","25" };
+    foreach (var Ages in ages)
+    {
+        <h3>@Ages</h3>
+    }
+
+    string[] electrnoic_items_stored_in_Array = {"Mobile","Laptop","Mouse" }; 
+    foreach (var ElecItems in electrnoic_items_stored_in_Array)
+    {
+        <p>@ElecItems</p>
+    }
+
+}
+
+
+
